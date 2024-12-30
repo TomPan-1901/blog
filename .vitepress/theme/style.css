@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Noto Sans', 'Noto Sans SC', sans-serif;
+    color: rgb(60, 60, 67);
+}
+
+code, kbd, samp, pre {
+    font-family: 'Noto Sans Mono', 'Noto Sans SC', monospace;
+}
+
+mjx-container svg {
+  display: unset;
+}
+
+div[class*=language-] {
+  @apply bg-gray-100 p-2 my-2 rounded-md
+}
+
+div[class*=language-] .copy {
+  @apply before:content-['Copy'] bg-gray-200 rounded-lg px-2 py-1
+}
+
+div[class*=language-] .copied {
+  @apply before:content-['Copied!']
+}
+
+div[class*=language-] pre {
+  @apply my-1 overflow-y-auto
+}
+
+div[class*=language-] .lang {
+  @apply float-right text-gray-400 text-xs
+}
+
+.blog-content h1:hover .header-anchor::before {
+  content: '#';
+}
+
+.blog-content h2:hover .header-anchor::before {
+  content: '#';
+}
+
+.blog-content h3:hover .header-anchor::before {
+  content: '#';
+}
+
+.blog-content h1 {
+  @apply text-3xl font-bold py-8
+}
+
+.blog-content h2 {
+  @apply text-2xl font-bold py-4 before:border-t-2 before:border-t-gray-200 before:block before:my-6
+}
+
+.blog-content h3 {
+  @apply text-xl font-bold py-2
+}
+
+.blog-content p {
+  @apply mt-3
+}
+
+.blog-content hr {
+  @apply hidden
+}
