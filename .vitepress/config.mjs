@@ -17,6 +17,7 @@ export default defineConfig({
     math: true
   },
   sitemap: {
+    hostname: 'https://tompan-1901.github.io/blog'
   },
   async buildEnd(siteConfig) {
     fs.readdirSync('./posts', { withFileTypes: true })
