@@ -11,7 +11,7 @@ const { site, frontmatter } = useData()
   <div class="bg-[#fcfcfc] w-full min-h-screen">
     <header class="p-3 border-b-2 border-b-gray-200">
       <h1 class="text-4xl font-bold flex justify-between items-center">
-        <a href="/">
+        <a :href="site.base">
           {{ site.title }}
         </a>
         <a :href="site.base+'archives'" class="font-normal text-xl px-2">博文归档</a>
@@ -25,7 +25,7 @@ const { site, frontmatter } = useData()
               {{ new Date(post.frontmatter.date).toDateString() }}
             </div>
             <div class="flex-1">
-              <a :href="post.url"
+              <a :href="site.base.slice(0, -1)+post.url"
                 class="px-2 py-3 text-4xl hover:underline hover:text-gray-500 transition-all duration-300">{{
                   post.frontmatter.title }}</a>
               <div class="px-2 py-3 text-gray-600 blog-content" v-if="post.excerpt" v-html="post.excerpt"></div>
