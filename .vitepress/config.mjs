@@ -1,13 +1,14 @@
 import { defineConfig } from 'vitepress'
 import fs from 'node:fs'
 import { createContentLoader } from 'vitepress';
-import mathjax3 from 'markdown-it-mathjax3'
+
+const base = '/blog/'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Tom's Blog",
   lang: 'zh-CN',
-  base: '/blog/',
+  base: base,
   description: "Tom's Blog",
   markdown: {
     anchor: {
@@ -17,7 +18,7 @@ export default defineConfig({
     math: true
   },
   sitemap: {
-    hostname: 'https://tompan-1901.github.io/blog'
+    hostname: 'https://tompan-1901.github.io/blog/'
   },
   async buildEnd(siteConfig) {
     fs.readdirSync('./posts', { withFileTypes: true })
