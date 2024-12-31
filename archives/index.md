@@ -1,5 +1,6 @@
 ---
 archives: true
+title: 博文归档
 ---
 
 <script setup>

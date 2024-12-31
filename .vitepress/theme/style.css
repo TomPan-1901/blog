@@ -12,6 +12,10 @@ code, kbd, samp, pre {
     font-family: 'Noto Sans Mono', 'Noto Sans SC', monospace;
 }
 
+mjx-container {
+  @apply overflow-auto
+}
+
 mjx-container svg {
   display: unset;
 }
